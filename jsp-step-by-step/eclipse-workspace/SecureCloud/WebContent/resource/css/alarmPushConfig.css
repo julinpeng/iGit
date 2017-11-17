@@ -1,0 +1,76 @@
+﻿/**
+ * ---------------------------------------------------------------------------------
+ * <copyright file="alarmPushConfig.css" company="江苏飞尚安全监测咨询有限公司">
+ * Copyright (C) 2015 飞尚科技
+ * 版权所有。
+ * </copyright>
+ * ---------------------------------------------------------------------------------
+ * <summary>
+ * 文件功能描述：告警推送配置css文件
+ *
+ * 创建标识：PengLing20150824
+ *
+ * 修改标识：
+ * 修改描述：
+ * </summary>
+ * ---------------------------------------------------------------------------------
+ */
+.page-fixed-loading {
+    position: fixed;
+    top: 30%;
+    left: 53%;
+    display: block;
+    width: 100px;
+    height: 100px;
+    outline: none;
+    background: url(/resource/img/ajax-loader.gif) no-repeat;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.modalSet-fixed-loading {
+    position: fixed;
+    top: 30%;
+    left: 48%;
+    display: block;
+    width: 100px;
+    height: 100px;
+    outline: none;
+    background: url(/resource/img/ajax-loader.gif) no-repeat;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.modalRemove-fixed-loading {
+    position: fixed;
+    top: 15%;
+    left: 47%;
+    display: block;
+    width: 100px;
+    height: 100px;
+    outline: none;
+    background: url(/resource/img/ajax-loader.gif) no-repeat;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#modalSetAlarmReceiver .control-group {
+    margin-bottom: 10px;
+}
+
+#modalSetAlarmReceiver .control-label {
+    padding-top: 0;
+    cursor: text;
+}
+
+#modalSetAlarmReceiver .checker {
+    margin-right: 0;
+}
+
+#modalSetAlarmReceiver .controls .checker+span {
+    margin-right: 10px;
+}
+
+.chzn-container-multi .chzn-choices {
+    border-color: #ccc !important;
+}

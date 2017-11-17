@@ -1,0 +1,158 @@
+* {
+    font: bold 13px "Hiragino Sans GB", "Microsoft Yahei";
+}
+
+.container{
+    padding: 0 50px;
+}
+
+#head {
+
+}
+
+#head-head {
+    background: url("../img/index-2.0/1354001650808.jpg");
+}
+
+#head-content{
+    height: 550px;
+    background: url("../img/index-2.0/1354001650808.jpg");
+}
+
+.cool-btn{
+    background: transparent;
+    border: 2px solid #ffffff;
+    color:#ffffff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cool-btn:hover{
+    text-decoration: none;
+}
+
+.cool-btn-default{
+    padding:4px;
+    background: transparent;
+    border: 1px solid #0088cc;
+    color:#0088cc;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cool-btn-default:hover{
+    text-decoration: none;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.cool-btn-green:hover{
+    border: 2px solid mediumspringgreen;
+    color:mediumspringgreen;
+}
+
+.cool-btn-yellow:hover{
+    border: 2px solid #ffe45c;
+    color:#ffe45c;
+}
+
+.cool-btn-red:hover{
+    border: 2px solid #953b39;
+    color:#953b39;
+}
+
+.navi {
+    padding-top: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.area {
+    min-height: 600px;
+}
+
+.navi-brand {
+    line-height: 40px;
+    float: left;
+}
+
+.navi-bar {
+    list-style: none;
+    float: right;
+}
+
+.navi-bar li {
+    float: left;
+    padding: 10px;
+    line-height: 24px;
+}
+
+.navi-bar li a {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.slogan {
+    padding-top: 150px;
+    color: #ffffff;
+    vertical-align: bottom;
+}
+
+.slogan-header {
+    padding: 40px 0;
+    font-size: 72px;
+    float:left;
+}
+
+.slogan-sub-header {
+    font-size: 16px;
+    padding: 110px 0 0 20px;
+    float:left;
+}
+
+.pad-tb-80 {
+    padding: 80px 0;
+}
+
+.margin-tb-40{
+    margin: 40px 0;
+}
+
+.pad-tb-40{
+    padding: 40px 0;
+}
+
+.pad-tb-10 {
+    padding: 10px 0;
+}
+
+#multi-client{
+    background:url('../img/index-2.0/1354001650808.jpg');
+    color:#ffffff;
+}
+
+#map{
+    height: 500px;
+}
+
+.footer{
+    padding: 20px 0;
+    background-color: #F5F5F5;
+}
+
+#mapIcon{position:relative;width: 260px;height: 460px;padding: 50px;margin-top: 10px;margin-right: 60px;}
+#iconBg{width: 260px;height: 460px;padding: 50px;position: absolute;filter:alpha(Opacity=80);-moz-opacity:0.8;opacity: 0.8;background: #f4f4f4;}
+#iconWrap{position: absolute;height: 360px;padding: 20px;width: 260px;}
+#iconWrap div {;font-size: 14px;font-weight: bold;color: #295fa2; }
+#iconWrap label{ cursor: pointer;}
+#iconWrap .control{ margin-top: 5px;height: 20px;line-height: 20px;}
+#iconWrap .control a{ height: 20px;line-height: 20px;font-size: 12px;color: black;display: block;float: left;margin-left: 5px;}
+#iconWrap .control a:hover{ color: #295fa2;}
+#iconWrap .yyWrap,#iconWrap .sgWrap { height: 20px;width: 200px;margin-top: 10px; }
+#iconWrap .colorFlag{ width: 20px;height: 20px;display: block;float: left; }
+#iconWrap .yyWrap .colorFlag { background: green; }
+#iconWrap .sgWrap .colorFlag { background: orange; }
+#iconWrap .txt { display: block;height: 20px;line-height: 20px;float: left;padding-left: 5px;}
+#structList { word-wrap:break-word; overflow-x:hidden; overflow-y: scroll;height: 200px;margin-top: 20px; }
+.structItem { word-wrap:break-word; overflow:hidden;background: #f2f2f2;border: 1px solid #ccc;margin-top: 10px;padding: 4px;cursor: pointer;}
+.anchorBL { display: none; }

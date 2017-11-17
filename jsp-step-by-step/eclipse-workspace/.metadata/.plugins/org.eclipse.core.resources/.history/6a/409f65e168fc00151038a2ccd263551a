@@ -1,0 +1,309 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="cn" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="cn" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="cn">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="renderer" content="webkit" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="resource/library/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="resource/css/metro.css" rel="stylesheet" />
+    <link href="resource/library/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="resource/css/style.css" rel="stylesheet" />
+    <link href="resource/css/style_responsive.css" rel="stylesheet" />    
+    <link rel="stylesheet" type="text/css" href="resource/library/uniform/css/uniform.default.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <style>
+.navi {
+    padding-top: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.area {
+    min-height: 600px;
+}
+
+.navi-brand {
+    line-height: 40px;
+    float: left;
+}
+
+.navi-bar {
+    list-style: none;
+    float: right;
+}
+
+.navi-bar li {
+    float: left;
+    padding: 10px;
+    line-height: 24px;
+}
+
+.navi-bar li a {
+    color: #ffffff;
+    font-size: 15px;
+}
+    </style>
+
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="login">
+<!-- BEGIN FREE-SUN LOGIN HEADER -->
+<div id="head-head" class="container-fluid navi anxinyun-nav" style="display: none;">
+    <div class="container">
+        <div class="navi-brand">
+            <img class="img-responsible" src="resource/img/index-2.0/logo-big.png"/>
+        </div>
+        <ul class="navi-bar right-block">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#" class="autoLogin">监测云</a></li>
+            <li><a href="http://service.anxinyun.cn">数据云</a></li>
+            <li><a href="http://218.3.150.107:8002">桥梁技术状况评定</a></li>
+            <li><a href="http://www.free-sun.com.cn" target="_blank">关于我们</a></li>
+            <li style="margin-top: -4px">
+                <a href="http://e.weibo.com/freesuntech?type=0" target="_blank"
+                   class="weibo">
+                    <img src="resource/img/index-2.0/small-weibo-c.png"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- END FREE-SUN LOGIN HEADER -->
+
+<!-- BEGIN SHOU-YANG LOGIN HEADER -->
+<div id="shouyang-login-header" class="container-fluid navi" style="margin-bottom: 100px; display: none;">
+    <div class="container">
+        <div class="navi-brand">
+            <div class="span11" align="center">
+                <img class="img-responsible" src="resource/uipackage/logo/logo-big.png" />
+                <font color="#ffffff" size="6px;">安徽省高速公路试验检测科研中心有限公司</font>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END SHOU-YANG LOGIN HEADER -->
+
+<div class="logo-space"></div>
+<!-- BEGIN LOGIN -->
+<div class="content" style="margin-top: 100px;">
+    <!-- BEGIN LOGIN FORM -->
+    <form class="form-vertical login-form">
+        <h3 class="form-title">登录</h3>
+        <div class="alert alert-error hide">
+            <button class="close" data-dismiss="alert"></button>
+            <span>请输入用户名和密码</span> 
+        </div>
+        <div class="control-group">
+            <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+            <label class="control-label visible-ie8 visible-ie9">账号</label>
+            <div class="controls">
+                <div class="input-icon left">
+                    <i class="icon-user"></i>
+                    <input id="username" class="m-wrap placeholder-no-fix" type="text" placeholder="账号" name="username"/>
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label visible-ie8 visible-ie9">密码</label>
+            <div class="controls">
+                <div class="input-icon left">
+                    <i class="icon-lock"></i>
+                    <input id="password" class="m-wrap placeholder-no-fix" type="password" placeholder="密码" name="password" onkeypress="TextValidate()"/>
+                </div>
+                <span id="caseTip" style="display: none;">大写锁定键被按下，请注意大小写</span>
+            </div>
+        </div>
+        <div class="form-actions">
+            <label class="checkbox">
+                <input type="checkbox" name="remember" value="1"/>
+                一周内自动登录
+            </label>
+            <button type="submit" id="btnLogin" class="btn green pull-right">
+                登录 <i class="m-icon-swapright m-icon-white"></i>
+            </button>
+        </div>
+
+        <!--<div class="forget-password">
+            <h4>忘记密码？</h4>
+            <p>
+                不要担心，点击 <a href="javascript:;" class="" id="forget-password">这里</a>
+                重置您的密码。
+            </p>
+        </div>-->
+        <div class="create-account">
+            <h4>需要修改密码？</h4>
+            <p>
+                不要担心，请点击 <a href="javascript:;" id="register-btn" class="">这里</a> 修改您的密码
+            </p>
+        </div>
+    </form>
+    <!-- END LOGIN FORM -->
+    <!-- BEGIN FORGOT PASSWORD FORM -->
+    <form class="form-vertical forget-form" action="index.aspx">
+        <h3 class="">忘记密码？</h3>
+        <p>请输入您的邮箱重置密码。</p>
+        <div class="control-group">
+            <div class="controls">
+                <div class="input-icon left">
+                    <i class="icon-envelope"></i>
+                    <input class="m-wrap placeholder-no-fix" type="text" placeholder="邮箱" name="email"/>
+                </div>
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="button" id="back-btn" class="btn">
+                <i class="m-icon-swapleft"></i>回退
+            </button>
+            <button type="submit" class="btn green pull-right">
+                提交 <i class="m-icon-swapright m-icon-white"></i>
+            </button>
+        </div>
+    </form>
+    <!-- END FORGOT PASSWORD FORM -->
+    <!-- BEGIN REGISTRATION FORM -->
+    <form class="form-vertical register-form" action="index.aspx">
+        <h3 class="">修改密码</h3>
+        <p>请输入您的用户信息：</p>
+        <div class="control-group">
+            <label class="control-label visible-ie8 visible-ie9">账号</label>
+            <div class="controls">
+                <div class="input-icon left">
+                    <i class="icon-user"></i>
+                    <input class="m-wrap placeholder-no-fix" type="text" id="UserName" placeholder="账号" name="UserName"/>
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label visible-ie8 visible-ie9">旧密码</label>
+            <div class="controls">
+                <div class="input-icon left">
+                    <i class="icon-lock"></i>
+                    <input class="m-wrap placeholder-no-fix" type="password" id="Old_password" placeholder="旧密码" name="Old_password" onkeypress="TextValidate()"/>
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label visible-ie8 visible-ie9">新密码</label>
+            <div class="controls">
+                <div class="input-icon left">
+                    <i class="icon-lock"></i>
+                    <input class="m-wrap placeholder-no-fix" type="password" id="New_password" placeholder="新密码" name="New_password" onkeypress="TextValidate()"/>
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <div class="input-icon left">
+                    <i class="icon-lock"></i>
+                    <input class="m-wrap placeholder-no-fix" type="password" id="Confirm_New_password" placeholder="再次输入新密码" name="Confirm_New_password" onkeypress="TextValidate()"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button id="register-back-btn" type="button" class="btn">
+                <i class="m-icon-swapleft"></i>回退
+            </button>
+            <button type="submit" id="register-submit-btn" class="btn green pull-right">
+                确认修改 <i class="m-icon-swapright m-icon-white"></i>
+            </button>
+        </div>
+    </form>
+    <!-- END REGISTRATION FORM -->
+</div>
+<!-- END LOGIN -->
+<!-- BEGIN COPYRIGHT -->
+<div class="copyright" id="copyright">
+
+</div>
+<!-- END COPYRIGHT -->
+
+<%@ include file="common.jsp"%>
+
+<!-- BEGIN JAVASCRIPTS -->
+<script src="resource/js/jquery-1.8.3.min.js"></script>
+<script src="resource/library/bootstrap/js/bootstrap.min.js"></script>
+<script src="resource/library/uniform/jquery.uniform.min.js"></script>
+<script src="resource/uipackage/uiTheme.js"></script>
+<script src="resource/js/jquery.blockui.js"></script>
+<script src="resource/library/jquery-validation/jquery.validate.min.js"></script>
+<script src="resource/js/securecloud.js"></script>
+<script src="resource/js/app.js"></script>
+
+<script>
+
+    var re = /^[A-Za-z0-9_]*$/;
+    $('#username').on('change', function() {
+        if (re.test($('#username').val()) == false) {
+            $('span', $('.alert-error', $('.login-form'))).html('用户名由字母、数字和下划线组成');
+            $('.alert-error', $('.login-form')).show();
+            $('#username').focus();
+        } else {
+            $('.alert-error', $('.login-form')).hide();
+        }
+    });
+    $('#register-submit-btn').click(function() {
+        var newPwd = $('#New_password').val();
+        if (!/^[a-zA-Z0-9]{1,15}$/.test(newPwd) || newPwd == "") {
+            $('#New_password').focus();
+            if (document.all) {
+                window.event.returnValue = false;
+            } else {
+                arguments.callee.caller.arguments[0].preventDefault();
+            }
+        } else if ((!testLetter(newPwd)) || (!testDigital(newPwd))) {
+            alert("密码设置过简单");
+            $('#New_password').focus();
+            if (document.all) {
+                window.event.returnValue = false;
+            } else {
+                arguments.callee.caller.arguments[0].preventDefault();
+            }
+        }
+    });
+    jQuery(document).ready(function() {
+        App.initLogin();
+
+    });
+</script>
+
+<script type="text/javascript">
+    //<![CDATA[
+    function detectCapsLock(event) {
+        var e = event || window.event;
+        var o = e.target || e.srcElement;
+        //var oTip = o.nextSibling;
+        var oTip = document.getElementById('caseTip');
+        var keyCode = e.keyCode || e.which; // 按键的keyCode 
+        var isShift = e.shiftKey || (keyCode == 16) || false; // shift键是否按住
+        if (
+            ((keyCode >= 65 && keyCode <= 90) && !isShift) // Caps Lock 打开，且没有按住shift键 
+                || ((keyCode >= 97 && keyCode <= 122) && isShift) // Caps Lock 打开，且按住shift键
+        ) {
+            oTip.style.display = '';
+        } else {
+            oTip.style.display = 'none';
+        }
+    }
+
+    document.getElementById('password').onkeypress = detectCapsLock;
+    //]]>
+</script>
+
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

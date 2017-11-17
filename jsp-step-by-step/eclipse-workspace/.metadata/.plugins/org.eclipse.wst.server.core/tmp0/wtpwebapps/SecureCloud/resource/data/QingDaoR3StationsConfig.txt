@@ -1,0 +1,57 @@
+[{
+	"stationName": "井冈山路站",
+	"longitude": 120.1958610000,
+	"latitude": 35.9568560000
+},
+{
+	"stationName": "嘉年华站",
+	"longitude": 120.1725410000,
+	"latitude": 35.9368770000
+},
+{
+	"stationName": "灵山卫站",
+	"longitude": 120.15442700000000,
+	"latitude": 35.93377600000000
+},
+{
+	"stationName": "黄海东路站",
+	"longitude": 120.1206575774,
+	"latitude": 35.9199127270
+},
+{
+	"stationName": "东方影都站",
+	"longitude": 120.1074835741,
+	"latitude": 35.9124340032
+},
+{
+	"stationName": "朝阳CBD站",
+	"longitude": 120.0830939110,
+	"latitude": 35.8976934632
+},
+{
+	"stationName": "两河站",
+	"longitude": 120.0684576002,
+	"latitude": 35.8941150816
+},
+{
+	"stationName": "北京路站",
+	"longitude": 120.04108135741,
+	"latitude": 35.89322235345
+},{
+	"stationName": "泰山路站",
+	"longitude": 120.0110008512,
+	"latitude": 35.8905527763
+},{
+	"stationName": "珠海路站",
+	"longitude": 119.9895858765,
+	"latitude": 35.8692993791
+},{
+	"stationName": "世纪大道站",
+	"longitude": 119.9768829346,
+	"latitude": 35.84852302524
+},{
+	"stationName": "大珠山",
+	"longitude": 119.98537000000,
+	"latitude": 35.7856000000
+}]
+

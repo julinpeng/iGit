@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>three.js Cube</title>
+</head>
+<body>
+<div>
+    <span>场景、相机、渲染器之间的关系: </span>
+    <ul>
+        <li>场景是一个物体容器</li>
+        <li>相机面对场景，取个合适的景把它拍下来</li>
+        <li>渲染器将相机拍摄下来的图片，显示在浏览器中</li>
+    </ul>
+</div>
+<div id="canvas3d-container"></div>
+
+<script src="//cdn.rawgit.com/mrdoob/three.js/master/build/three.min.js"></script>
+<script>
+    var camera, scene, renderer;
+    var cube;
+
+    init();
+    render();
+
+    function init() {
+        // 创建相机
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
+        camera.position.z = 1000;
+
+        // 创建场景
+        scene = new THREE.Scene();
+
+        // 创建光源
+        var light = new THREE.AmbientLight(0x00ff00);
+        scene.add(light);
+
+        // 创建Cube, 附上几何结构和材质
+        var geometry = new THREE.BoxGeometry(200, 200, 200);
+        var material = new THREE.MeshBasicMaterial({color: 0xff0000}); // 红色
+        cube = new THREE.Mesh(geometry, material);
+        cube.position.y = 150;
+        scene.add(cube); // 将Cube添加到场景中
+
+        // 创建渲染器
+        renderer = new THREE.WebGLRenderer();
+        renderer.setClearColor(0x747474); // 灰色背景
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        // 装载容器
+        document.getElementById('canvas3d-container').appendChild(renderer.domElement);
+    }
+
+    function render() {
+        requestAnimationFrame(render);
+        // 动画
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+        // 渲染
+        renderer.render(scene, camera);
+    }
+</script>
+</body>
+</html>

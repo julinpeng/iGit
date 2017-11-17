@@ -1,0 +1,25 @@
+.modal-open {
+    overflow: auto;
+    padding: 0 !important;
+}
+
+.modal.msg-popup {
+    top: auto;
+    left: 60%;
+    border: none;
+    width: 300px !important;
+}
+
+.modal.msg-popup .modal-dialog {
+    width: 300px !important;
+    margin: auto;
+}
+
+.modal.msg-popup .modal-body {
+    background-color: #000;
+    color: #fff;
+}
+
+.modal.msg-popup .modal-content {
+    border: none;
+}

@@ -1,0 +1,9 @@
+127.0.0.1 - - [06/Apr/2016:13:09:01 +0800] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:13:09:02 +0800] "GET /SecureCloud/login.jsp HTTP/1.1" 200 12003
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:13:09:02 +0800] "GET /SecureCloud/resource/uipackage/uiTheme.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:13:09:02 +0800] "GET /SecureCloud/resource/js/securecloud.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:13:09:17 +0800] "GET /SecureCloud/index.jsp HTTP/1.1" 200 17752
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:13:09:17 +0800] "GET /SecureCloud/resource/js/mapGIS.js?r=0.9592046021729542 HTTP/1.1" 200 17559
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:13:09:17 +0800] "GET /SecureCloud/resource/js/index.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:13:09:17 +0800] "GET /SecureCloud/resource/uipackage/logo/logo.png?r=0.45749958805120183 HTTP/1.1" 200 4288
+0:0:0:0:0:0:0:1 - - [06/Apr/2016:13:09:20 +0800] "GET /SecureCloud/resource/language/zn_CN.txt HTTP/1.1" 304 -
